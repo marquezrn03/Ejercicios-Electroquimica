@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolució Exercicis Electroquímica (13a Sessió)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            tags: 'ams'
+          },
+          svg: {
+            fontCache: 'global'
+          },
+          options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            ignoreHtmlClass: 'tex2jax_ignore',
+            processHtmlClass: 'tex2jax_process'
+          }
+        };
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async id="MathJax-script"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #f8fafc; }
+        h1 { color: #111827; font-size: 1.875rem; line-height: 2.25rem; font-weight: 700;}
+        h2 { color: #0c4a6e; font-size: 1.6rem; line-height: 2.1rem; font-weight: 700; border-bottom: 3px solid #7dd3fc; padding-bottom: 0.5rem; margin-top: 2.5rem; margin-bottom: 1.5rem; }
+        h3 { color: #0369a1; font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; border-bottom: 1px solid #bae6fd; padding-bottom: 0.25rem; }
+        p, li { color: #374151; line-height: 1.75; margin-bottom: 1rem; }
+        strong { color: #1F2937; font-weight: 600; }
+        .section-bg-light { background-color: #f0f9ff; }
+        .section-bg-white { background-color: #FFFFFF; }
+        .math-block { margin: 1.5rem 0; padding: 1rem; background-color: #f0f9ff; border-left: 4px solid #38bdf8; font-size: 1.1rem; overflow-x: auto;}
+        .footer-attribution { margin-top: 1.5rem; font-size: 0.875rem; line-height: 1.25rem; color: #6b7280; text-align: center; }
+        .calculation-step { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb;}
+        .calculation-step:last-child { border-bottom: none; }
+        .explanation { background-color: #f9fafb; padding: 1rem; border-radius: 0.375rem; border: 1px solid #e5e7eb; margin-top: 1rem; font-size: 0.95rem;}
+        .explanation p, .explanation li { margin-bottom: 0.75rem; }
+        .value-highlight { font-weight: 600; color: #047857; /* Verd fosc */ }
+        .unit-conversion { font-size: 0.85rem; color: #6b7280; margin-left: 0.5rem; }
+        .assumption { font-style: italic; color: #4b5563; margin-top: 0.5rem; font-size: 0.9rem; }
+        .reference-note { font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem; }
+         mjx-container { display: inline-block !important; margin: 0 0.1em;}
+         .original-enunciat { background-color: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 1rem; margin-bottom: 2rem; font-style: italic; color: #0c4a6e; }
+         .final-answer { background-color: #d1fae5; color: #065f46; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: 600; display: inline-block; margin-top: 0.5rem;}
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <header class="bg-gradient-to-r from-sky-700 to-cyan-700 text-white shadow-md">
+        <div class="container mx-auto px-6 py-5">
+            <h1 class="text-2xl md:text-3xl font-bold">Resolució d'Exercicis d'Electroquímica</h1>
+            <p class="text-lg font-semibold mt-1">13a Sessió de Problemes</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <section id="ex110" class="mb-12 p-6 rounded-lg shadow-lg section-bg-white">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 110: Ajust de Reaccions Redox (Mètode Ió-Electró)</h2>
+            <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> Ajusteu mitjançant el mètode del ió-electró les següents reaccions:</p>
+                <ul class="list-disc list-inside pl-4 mt-2 !mb-0">
+                    <li>\( \text{H}_2\text{S} + \text{HNO}_3 \rightarrow \text{S} + \text{NO} + \text{H}_2\text{O} \)</li>
+                    <li>\( \text{CuO} + \text{H}_2 \rightarrow \text{Cu} + \text{H}_2\text{O} \)</li>
+                </ul>
+            </div>
+
+            <div class="calculation-step">
+                <h3>a) \( \text{H}_2\text{S} + \text{HNO}_3 \rightarrow \text{S} + \text{NO} + \text{H}_2\text{O} \)</h3>
+                <div class="explanation">
+                    <p><strong>1. Identificar estats d'oxidació i semireaccions:</strong></p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>En \( \text{H}_2\text{S} \), S té estat -2. En \( \text{S} \), S té estat 0. (Oxidació)</li>
+                        <li>En \( \text{HNO}_3 \), N té estat +5. En \( \text{NO} \), N té estat +2. (Reducció)</li>
+                    </ul>
+                    <p><strong>2. Escriure i ajustar les semireaccions (en medi àcid, ja que hi ha \(\text{HNO}_3\)):</strong></p>
+                    <p>Semireacció d'oxidació:</p>
+                    <p>\( \text{H}_2\text{S} \rightarrow \text{S} \)</p>
+                    <p>\( \text{H}_2\text{S} \rightarrow \text{S} + 2\text{H}^+ \)</p>
+                    <p>\( \text{H}_2\text{S} \rightarrow \text{S} + 2\text{H}^+ + 2e^- \)</p>
+                    <p class="mt-2">Semireacció de reducció:</p>
+                    <p>\( \text{HNO}_3 \rightarrow \text{NO} \)</p>
+                    <p>\( \text{HNO}_3 \rightarrow \text{NO} + 2\text{H}_2\text{O} \) (Ajustar O amb \(\text{H}_2\text{O}\))</p>
+                    <p>\( \text{HNO}_3 + 3\text{H}^+ \rightarrow \text{NO} + 2\text{H}_2\text{O} \) (Ajustar H amb \(\text{H}^+\))</p>
+                    <p>\( \text{HNO}_3 + 3\text{H}^+ + 3e^- \rightarrow \text{NO} + 2\text{H}_2\text{O} \) (Ajustar càrregues amb \(e^-\))</p>
+                    <p><strong>3. Igualar el nombre d'electrons:</strong></p>
+                    <p>Multipliquem la semireacció d'oxidació per 3 i la de reducció per 2:</p>
+                    <p>\( 3(\text{H}_2\text{S} \rightarrow \text{S} + 2\text{H}^+ + 2e^-) \implies 3\text{H}_2\text{S} \rightarrow 3\text{S} + 6\text{H}^+ + 6e^- \)</p>
+                    <p>\( 2(\text{HNO}_3 + 3\text{H}^+ + 3e^- \rightarrow \text{NO} + 2\text{H}_2\text{O}) \implies 2\text{HNO}_3 + 6\text{H}^+ + 6e^- \rightarrow 2\text{NO} + 4\text{H}_2\text{O} \)</p>
+                    <p><strong>4. Sumar les semireaccions i simplificar:</strong></p>
+                    <p>\( 3\text{H}_2\text{S} + 2\text{HNO}_3 + 6\text{H}^+ + 6e^- \rightarrow 3\text{S} + 6\text{H}^+ + 6e^- + 2\text{NO} + 4\text{H}_2\text{O} \)</p>
+                    <p>Simplificant \(6\text{H}^+\) i \(6e^-\):</p>
+                    <div class="final-answer">\( 3\text{H}_2\text{S} + 2\text{HNO}_3 \rightarrow 3\text{S} + 2\text{NO} + 4\text{H}_2\text{O} \)</div>
+                </div>
+            </div>
+
+            <div class="calculation-step">
+                <h3>b) \( \text{CuO} + \text{H}_2 \rightarrow \text{Cu} + \text{H}_2\text{O} \)</h3>
+                <div class="explanation">
+                    <p><strong>1. Identificar estats d'oxidació i semireaccions:</strong></p>
+                    <ul class="list-disc list-inside ml-4">
+                        <li>En \( \text{CuO} \), Cu té estat +2. En \( \text{Cu} \), Cu té estat 0. (Reducció)</li>
+                        <li>En \( \text{H}_2 \), H té estat 0. En \( \text{H}_2\text{O} \), H té estat +1. (Oxidació)</li>
+                    </ul>
+                    <p><strong>2. Escriure i ajustar les semireaccions (es pot considerar medi neutre o lleugerament àcid/bàsic si cal, però aquí és directe):</strong></p>
+                    <p>Semireacció de reducció:</p>
+                    <p>\( \text{CuO} \rightarrow \text{Cu} \)</p>
+                    <p>\( \text{CuO} \rightarrow \text{Cu} + \text{H}_2\text{O} \) (Ajustar O amb \(\text{H}_2\text{O}\))</p>
+                    <p>\( \text{CuO} + 2\text{H}^+ \rightarrow \text{Cu} + \text{H}_2\text{O} \) (Ajustar H amb \(\text{H}^+\))</p>
+                    <p>\( \text{CuO} + 2\text{H}^+ + 2e^- \rightarrow \text{Cu} + \text{H}_2\text{O} \) (Ajustar càrregues)</p>
+                    <p class="mt-2">Semireacció d'oxidació:</p>
+                    <p>\( \text{H}_2 \rightarrow \text{H}_2\text{O} \) </p>
+                    <p>\( \text{H}_2 \rightarrow \text{H}_2\text{O} \) (L'O ja està en \(\text{H}_2\text{O}\), però necessitem ajustar H)</p>
+                    <p>\( \text{H}_2 \rightarrow 2\text{H}^+ + 2e^- \) (Versió simplificada si l'oxigen de l'aigua prové del CuO. Alternativament, si l'H₂ s'oxida per formar aigua, i l'oxigen del CuO també forma aigua, podem fer-ho més directe.)</p>
+                    <p>Considerant la reacció global, és més senzill: </p>
+                    <p>Reducció: \( \text{CuO} + 2e^- \rightarrow \text{Cu} + \text{O}^{2-} \) (conceptualment, l'oxigen del CuO esdevé \(\text{O}^{2-}\) que després reacciona)</p>
+                    <p>Oxidació: \( \text{H}_2 \rightarrow 2\text{H}^+ + 2e^- \) </p>
+                    <p>L'\(\text{O}^{2-}\) i els \(2\text{H}^+\) formen \(\text{H}_2\text{O}\).</p>
+                    <p>Una forma més directa per a aquest cas simple:</p>
+                    <p>Semireacció de reducció: \( \text{CuO} + 2e^- \rightarrow \text{Cu} + \text{O}^{2-} \) (l'oxigen es transfereix)</p>
+                    <p>Semireacció d'oxidació: \( \text{H}_2 \rightarrow 2\text{H}^+ + 2e^- \) </p>
+                    <p>Si sumem directament i formem aigua:</p>
+                    <p>\( \text{CuO} + \text{H}_2 \rightarrow \text{Cu} + (2\text{H}^+ + \text{O}^{2-}) \implies \text{CuO} + \text{H}_2 \rightarrow \text{Cu} + \text{H}_2\text{O} \)</p>
+                    <p><strong>3. Igualar el nombre d'electrons:</strong> En aquest cas, ja són 2 electrons en ambdues semireaccions implícites.</p>
+                    <p><strong>4. Sumar les semireaccions:</strong> La reacció ja està equilibrada tal com està escrita.</p>
+                    <div class="final-answer">\( \text{CuO} + \text{H}_2 \rightarrow \text{Cu} + \text{H}_2\text{O} \)</div>
+                    <p class="reference-note mt-2">En aquest cas particular, l'ajust és trivial ja que els coeficients estequiomètrics ja compleixen el balanç de massa i càrrega.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ex118" class="mb-12 p-6 rounded-lg shadow-lg section-bg-light">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 118: Pila H₂/Cd</h2>
+            <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> En una pila formada per elèctrodes d'hidrogen i cadmi, es donen les següents condicions: \(P_{\text{H}_2} = 1.5 \, \text{atm}\); \([\text{H}^+] = 1.2 \, \text{M}\); \([\text{Cd}^{2+}] = 0.5 \, \text{M}\); \(E^0_{\text{Cd}^{2+}/\text{Cd}} = -0.403 \, \text{V}\).<br>
+                a) Escriviu les reaccions que tenen lloc en els elèctrodes i calculeu \(E^\circ\) de la pila.<br>
+                b) Calculeu E de la pila en les condicions del problema i escriviu la seva notació esquemàtica.</p>
+            </div>
+
+            <div class="calculation-step">
+                <h3>a) Reaccions i Potencial Estàndard de la Pila (\(E^\circ_{\text{pila}}\))</h3>
+                <div class="explanation">
+                    <p><strong>1. Potencials estàndard de reducció:</strong></p>
+                    <p>\( E^0_{\text{Cd}^{2+}/\text{Cd}} = -0.403 \, \text{V} \)</p>
+                    <p>\( E^0_{2\text{H}^{+}/\text{H}_2} = 0.000 \, \text{V} \) (per definició)</p>
+                    <p><strong>2. Identificar ànode i càtode:</strong></p>
+                    <p>El potencial de reducció més alt actua com a càtode (reducció), el més baix com a ànode (oxidació).</p>
+                    <p>\( E^0_{2\text{H}^{+}/\text{H}_2} (0.000 \, \text{V}) > E^0_{\text{Cd}^{2+}/\text{Cd}} (-0.403 \, \text{V}) \)</p>
+                    <p>Per tant: Càtode: Elèctrode d'hidrogen. Ànode: Elèctrode de cadmi.</p>
+                    <p><strong>3. Reaccions en els elèctrodes:</strong></p>
+                    <p>Ànode (Oxidació): \( \text{Cd(s)} \rightarrow \text{Cd}^{2+}\text{(aq)} + 2e^- \)</p>
+                    <p>Càtode (Reducció): \( 2\text{H}^{+}\text{(aq)} + 2e^- \rightarrow \text{H}_2\text{(g)} \)</p>
+                    <p>Reacció global de la pila: \( \text{Cd(s)} + 2\text{H}^{+}\text{(aq)} \rightarrow \text{Cd}^{2+}\text{(aq)} + \text{H}_2\text{(g)} \)</p>
+                    <p><strong>4. Càlcul de \(E^\circ_{\text{pila}}\):</strong></p>
+                    <p>\( E^\circ_{\text{pila}} = E^\circ_{\text{càtode}} - E^\circ_{\text{ànode}} = E^0_{2\text{H}^{+}/\text{H}_2} - E^0_{\text{Cd}^{2+}/\text{Cd}} \)</p>
+                    <p>\( E^\circ_{\text{pila}} = 0.000 \, \text{V} - (-0.403 \, \text{V}) = +0.403 \, \text{V} \)</p>
+                    <div class="final-answer">\(E^\circ_{\text{pila}} = 0.403 \, \text{V}\)</div>
+                </div>
+            </div>
+
+            <div class="calculation-step">
+                <h3>b) Potencial de la Pila (E) en Condicions No Estàndard i Notació</h3>
+                <div class="explanation">
+                    <p><strong>1. Equació de Nernst:</strong> (Assumint T = 298 K)</p>
+                    <p>\( E = E^\circ_{\text{pila}} - \frac{0.0592}{n} \log Q \)</p>
+                    <p>On \(n\) és el nombre d'electrons transferits (en aquest cas, \(n=2\)) i \(Q\) és el quocient de reacció.</p>
+                    <p><strong>2. Quocient de reacció (\(Q\)):</strong></p>
+                    <p>Per a la reacció: \( \text{Cd(s)} + 2\text{H}^{+}\text{(aq)} \rightarrow \text{Cd}^{2+}\text{(aq)} + \text{H}_2\text{(g)} \)</p>
+                    <p>\( Q = \frac{[\text{Cd}^{2+}] \cdot P_{\text{H}_2}}{[\text{H}^{+}]^2} \)</p>
+                    <p>(Les activitats dels sòlids purs són 1. La pressió del gas s'utilitza en atm).</p>
+                    <p><strong>3. Substituir valors:</strong></p>
+                    <p>\( [\text{Cd}^{2+}] = 0.5 \, \text{M} \)</p>
+                    <p>\( P_{\text{H}_2} = 1.5 \, \text{atm} \)</p>
+                    <p>\( [\text{H}^{+}] = 1.2 \, \text{M} \)</p>
+                    <p>\( Q = \frac{(0.5) \cdot (1.5)}{(1.2)^2} = \frac{0.75}{1.44} \approx 0.5208 \)</p>
+                    <p><strong>4. Calcular E:</strong></p>
+                    <p>\( E = 0.403 \, \text{V} - \frac{0.0592}{2} \log (0.5208) \)</p>
+                    <p>\( E = 0.403 \, \text{V} - 0.0296 \times (-0.2833) \)</p>
+                    <p>\( E = 0.403 \, \text{V} + 0.008387 \approx 0.411387 \, \text{V} \)</p>
+                    <div class="final-answer">\(E_{\text{pila}} \approx 0.411 \, \text{V}\)</div>
+                    <p><strong>5. Notació esquemàtica de la pila:</strong></p>
+                    <p>Ànode | Electròlit de l'ànode || Electròlit del càtode | Càtode</p>
+                    <div class="final-answer">\( \text{Cd(s)} | \text{Cd}^{2+}\text{(aq, 0.5 M)} || \text{H}^{+}\text{(aq, 1.2 M)} | \text{H}_2\text{(g, 1.5 atm)} | \text{Pt(s)} \)</div>
+                    <p class="reference-note">(S'afegeix Pt(s) com a elèctrode inert per a l'hidrogen gas).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ex120" class="mb-12 p-6 rounded-lg shadow-lg section-bg-white">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 120: pH i Elèctrode d'Hidrogen</h2>
+             <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> Calculeu el pH d'una solució on es troba submergit un elèctrode d'hidrogen, sabent que si es forma una pila amb aquest elèctrode i l'estàndard \( \text{Cu}^{2+}/\text{Cu} \) (1M), el potencial de la pila a 298 K és de 0.72V. \(P_{\text{H}_2} = 1 \, \text{atm}\); \(E^0_{\text{Cu}^{2+}/\text{Cu}} = 0.337 \, \text{V}\).</p>
+            </div>
+            <div class="explanation">
+                <p><strong>1. Potencials estàndard:</strong></p>
+                <p>\( E^0_{\text{Cu}^{2+}/\text{Cu}} = 0.337 \, \text{V} \)</p>
+                <p>\( E^0_{2\text{H}^{+}/\text{H}_2} = 0.000 \, \text{V} \)</p>
+                <p><strong>2. Identificar ànode i càtode:</strong></p>
+                <p>El potencial de la pila és 0.72V. Si l'elèctrode de coure fos el càtode i l'hidrogen l'ànode (oxidació de H₂), \(E^\circ_{\text{pila}} = 0.337 - 0 = 0.337 \text{V}\).</p>
+                <p>Si l'elèctrode d'hidrogen fos el càtode (reducció de H⁺) i el coure l'ànode (oxidació de Cu), \(E^\circ_{\text{pila}} = 0 - 0.337 = -0.337 \text{V}\).</p>
+                <p>Com que el potencial mesurat (0.72V) és positiu i superior a 0.337V, això suggereix que l'elèctrode de coure actua com a càtode i l'elèctrode d'hidrogen com a ànode, però el potencial de l'elèctrode d'hidrogen no és l'estàndard.</p>
+                <p>Reaccions:</p>
+                <p>Càtode (Reducció): \( \text{Cu}^{2+}\text{(aq, 1M)} + 2e^- \rightarrow \text{Cu(s)} \quad (E_{\text{càtode}} = E^0_{\text{Cu}^{2+}/\text{Cu}} = 0.337 \, \text{V} \text{, ja que és estàndard})\)</p>
+                <p>Ànode (Oxidació): \( \text{H}_2\text{(g, 1 atm)} \rightarrow 2\text{H}^{+}\text{(aq, x M)} + 2e^- \quad (E_{\text{ànode}}) \)</p>
+                <p><strong>3. Potencial de la pila:</strong></p>
+                <p>\( E_{\text{pila}} = E_{\text{càtode}} - E_{\text{ànode}} \)</p>
+                <p>\( 0.72 \, \text{V} = 0.337 \, \text{V} - E_{\text{ànode}} \)</p>
+                <p>\( E_{\text{ànode}} = 0.337 \, \text{V} - 0.72 \, \text{V} = -0.383 \, \text{V} \)</p>
+                <p>Aquest \(E_{\text{ànode}}\) és el potencial de l'elèctrode d'hidrogen en les condicions donades (oxidació).</p>
+                <p><strong>4. Equació de Nernst per a l'elèctrode d'hidrogen (reacció d'oxidació):</strong></p>
+                <p>Per a \( \text{H}_2\text{(g)} \rightarrow 2\text{H}^{+}\text{(aq)} + 2e^- \), el potencial d'oxidació és:</p>
+                <p>\( E_{\text{H}_2/2\text{H}^{+}} = E^0_{\text{H}_2/2\text{H}^{+}} - \frac{0.0592}{2} \log \frac{[\text{H}^{+}]^2}{P_{\text{H}_2}} \)</p>
+                <p>On \( E^0_{\text{H}_2/2\text{H}^{+}} = -E^0_{2\text{H}^{+}/\text{H}_2} = 0.000 \, \text{V} \).</p>
+                <p>\( -0.383 \, \text{V} = 0 - \frac{0.0592}{2} \log \frac{[\text{H}^{+}]^2}{1} \)</p>
+                <p>\( -0.383 = -0.0296 \times 2 \log [\text{H}^{+}] \)</p>
+                <p>\( -0.383 = -0.0592 \log [\text{H}^{+}] \)</p>
+                <p>Recordem que \( \text{pH} = -\log [\text{H}^{+}] \), llavors \( \log [\text{H}^{+}] = -\text{pH} \).</p>
+                <p>\( -0.383 = -0.0592 \times (-\text{pH}) \)</p>
+                <p>\( -0.383 = 0.0592 \cdot \text{pH} \)</p>
+                <p>\( \text{pH} = \frac{-0.383}{0.0592} \approx -6.469 \)</p>
+                <p>Hi ha un error de signe. Revisem. Si \(E_{\text{ànode}}\) és el potencial d'oxidació, i el potencial de reducció és \(E_{2\text{H}^{+}/\text{H}_2}\), llavors \(E_{\text{ànode}} = -E_{2\text{H}^{+}/\text{H}_2}\).</p>
+                <p>Potencial de reducció de l'elèctrode d'hidrogen: \( E_{2\text{H}^{+}/\text{H}_2} = E^0_{2\text{H}^{+}/\text{H}_2} - \frac{0.0592}{2} \log \frac{P_{\text{H}_2}}{[\text{H}^{+}]^2} \)</p>
+                <p>\( E_{2\text{H}^{+}/\text{H}_2} = 0 - 0.0296 \log \frac{1}{[\text{H}^{+}]^2} = -0.0296 (-2 \log [\text{H}^{+}] ) = 0.0592 \log [\text{H}^{+}] = -0.0592 \cdot \text{pH} \)</p>
+                <p>Sabem que \(E_{\text{ànode}} = -0.383 \, \text{V}\). Com que l'hidrogen actua com a ànode (oxidació), el seu potencial de reducció és \(+0.383 \, \text{V}\) si la reacció fos a la inversa, o més directament, el potencial d'oxidació és \(E_{\text{oxidació}} = - E_{\text{reducció}}\).</p>
+                <p>El potencial de l'elèctrode d'hidrogen (com a potencial de reducció) és \(E_{H^+/H_2}\). Si actua com a ànode, \(E_{pila} = E_{cat} - E_{H^+/H_2}\).</p>
+                <p>\(0.72 = 0.337 - E_{H^+/H_2}\) </p>
+                <p>\(E_{H^+/H_2} = 0.337 - 0.72 = -0.383 \, \text{V}\).</p>
+                <p>Ara apliquem Nernst a la semireacció de reducció de l'hidrogen:</p>
+                <p>\( E_{H^+/H_2} = E^0_{H^+/H_2} - \frac{0.0592}{2} \log \frac{P_{H_2}}{[H^+]^2} \)</p>
+                <p>\( -0.383 = 0 - 0.0296 \log \frac{1}{[H^+]^2} \)</p>
+                <p>\( -0.383 = -0.0296 (-2 \log[H^+]) \)</p>
+                <p>\( -0.383 = 0.0592 \log[H^+] \)</p>
+                <p>\( \log[H^+] = \frac{-0.383}{0.0592} \approx -6.4696 \)</p>
+                <p>\( \text{pH} = -\log[H^+] = -(-6.4696) \approx 6.4696 \)</p>
+                <div class="final-answer">pH \(\approx 6.47\)</div>
+            </div>
+        </section>
+
+        <section id="ex121" class="mb-12 p-6 rounded-lg shadow-lg section-bg-light">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 121: Concentració en Pila Zn/Cd</h2>
+             <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> Si \(E^0_{\text{Zn}^{2+}/\text{Zn}} = -0.76 \, \text{V}\) i \(E^0_{\text{Cd}^{2+}/\text{Cd}} = -0.40 \, \text{V}\), quina serà la \([\text{Cd}^{2+}]\) a la pila \( \text{Zn}/\text{Zn}^{2+}\text{(0.09M)}//\text{Cd}^{2+}\text{(x M)}/\text{Cd} \) si el potencial de la pila és 0.40V?</p>
+            </div>
+            <div class="explanation">
+                <p><strong>1. Identificar ànode i càtode (basat en \(E^\circ\)):</strong></p>
+                <p>\(E^0_{\text{Cd}^{2+}/\text{Cd}} (-0.40 \, \text{V}) > E^0_{\text{Zn}^{2+}/\text{Zn}} (-0.76 \, \text{V})\)</p>
+                <p>Càtode: Cd. Ànode: Zn.</p>
+                <p><strong>2. Reaccions:</strong></p>
+                <p>Ànode (Oxidació): \( \text{Zn(s)} \rightarrow \text{Zn}^{2+}\text{(aq)} + 2e^- \)</p>
+                <p>Càtode (Reducció): \( \text{Cd}^{2+}\text{(aq)} + 2e^- \rightarrow \text{Cd(s)} \)</p>
+                <p>Global: \( \text{Zn(s)} + \text{Cd}^{2+}\text{(aq)} \rightarrow \text{Zn}^{2+}\text{(aq)} + \text{Cd(s)} \)</p>
+                <p><strong>3. Potencial estàndard de la pila:</strong></p>
+                <p>\( E^\circ_{\text{pila}} = E^\circ_{\text{càtode}} - E^\circ_{\text{ànode}} = (-0.40 \, \text{V}) - (-0.76 \, \text{V}) = 0.36 \, \text{V} \)</p>
+                <p><strong>4. Equació de Nernst:</strong> (T=298K, n=2)</p>
+                <p>\( E = E^\circ - \frac{0.0592}{2} \log Q \)</p>
+                <p>\( Q = \frac{[\text{Zn}^{2+}]}{[\text{Cd}^{2+}]} \)</p>
+                <p><strong>5. Substituir valors i resoldre per \([\text{Cd}^{2+}]\):</strong></p>
+                <p>\( 0.40 \, \text{V} = 0.36 \, \text{V} - 0.0296 \log \frac{0.09}{[\text{Cd}^{2+}]} \)</p>
+                <p>\( 0.40 - 0.36 = -0.0296 \log \frac{0.09}{[\text{Cd}^{2+}]} \)</p>
+                <p>\( 0.04 = -0.0296 \log \frac{0.09}{[\text{Cd}^{2+}]} \)</p>
+                <p>\( \frac{0.04}{-0.0296} = \log \frac{0.09}{[\text{Cd}^{2+}]} \)</p>
+                <p>\( -1.35135 = \log 0.09 - \log [\text{Cd}^{2+}] \)</p>
+                <p>\( \log [\text{Cd}^{2+}] = \log 0.09 - (-1.35135) = -1.04576 + 1.35135 = 0.30559 \)</p>
+                <p>\( [\text{Cd}^{2+}] = 10^{0.30559} \approx 2.021 \, \text{M} \)</p>
+                <div class="final-answer">\([\text{Cd}^{2+}] \approx 2.02 \, \text{M}\)</div>
+                 <p class="reference-note">(Proper a la resposta R=2.04M, les diferències poden ser per arrodoniments o valor de la constant de Nernst.)</p>
+            </div>
+        </section>
+
+        <section id="ex124" class="mb-12 p-6 rounded-lg shadow-lg section-bg-white">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 124: Cel·la de Concentració</h2>
+            <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> Una cel·la de concentració està formada per dues semicel·les de plata (A i B). En la semicel·la A l'elèctrode s'introdueix en nitrat de plata 0.01M i en la semicel·la B s'introdueix en nitrat de plata \(4 \cdot 10^{-4}\)M. Quin serà el potencial de la cel·la a 298K? \(E^\circ_{\text{Ag}^+/\text{Ag}} = 0.80 \, \text{V}\).</p>
+            </div>
+            <div class="explanation">
+                <p>En una cel·la de concentració, \(E^\circ_{\text{pila}} = 0\) perquè els elèctrodes són del mateix material.</p>
+                <p>La reacció espontània serà aquella que tendeixi a igualar les concentracions. La semicel·la més diluïda actuarà com a ànode (oxidació, \(\text{Ag} \rightarrow \text{Ag}^+ + e^-\)) i la més concentrada com a càtode (reducció, \(\text{Ag}^+ + e^- \rightarrow \text{Ag}\)).</p>
+                <p>Semicel·la A: \([\text{Ag}^+]_{\text{A}} = 0.01 \, \text{M}\) (més concentrada -> Càtode)</p>
+                <p>Semicel·la B: \([\text{Ag}^+]_{\text{B}} = 4 \times 10^{-4} \, \text{M}\) (més diluïda -> Ànode)</p>
+                <p>Reaccions:</p>
+                <p>Ànode (B): \( \text{Ag(s)} \rightarrow \text{Ag}^+\text{(aq, B)} + e^- \)</p>
+                <p>Càtode (A): \( \text{Ag}^+\text{(aq, A)} + e^- \rightarrow \text{Ag(s)} \)</p>
+                <p>Global: \( \text{Ag}^+\text{(aq, A)} \rightarrow \text{Ag}^+\text{(aq, B)} \)</p>
+                <p>Equació de Nernst (\(n=1\)):</p>
+                <p>\( E = E^\circ - \frac{0.0592}{1} \log Q \)</p>
+                <p>\( E = 0 - 0.0592 \log \frac{[\text{Ag}^+]_{\text{B}}}{[\text{Ag}^+]_{\text{A}}} \)</p>
+                <p>\( E = -0.0592 \log \frac{4 \times 10^{-4}}{0.01} = -0.0592 \log (0.04) \)</p>
+                <p>\( E = -0.0592 \times (-1.39794) \approx 0.08276 \, \text{V} \)</p>
+                <div class="final-answer">\(E \approx 0.083 \, \text{V}\)</div>
+                 <p class="reference-note">(Proper a la resposta R=0.08V).</p>
+            </div>
+        </section>
+
+        <section id="ex123" class="mb-12 p-6 rounded-lg shadow-lg section-bg-light">
+            <h2 class="text-sky-800 border-b-2 border-sky-300 pb-2 mb-6">Exercici 123: Espontaneïtat de Reacció</h2>
+            <div class="original-enunciat">
+                <p class="!mb-0"><strong>Enunciat:</strong> Raoneu si la reacció que es descriu tot seguit, és espontània a 298K: \( \text{Co(s)} + \text{Fe}^{2+}\text{(aq)} \leftrightarrow \text{Co}^{2+}\text{(aq)} + \text{Fe(s)} \) si \([\text{Co}^{2+}] = 0.15 \, \text{M}\) i \([\text{Fe}^{2+}] = 0.68 \, \text{M}\). \(E^\circ_{\text{Co}^{2+}/\text{Co}} = -0.28 \, \text{V}\); \(E^\circ_{\text{Fe}^{2+}/\text{Fe}} = -0.44 \, \text{V}\).</p>
+            </div>
+            <div class="explanation">
+                <p><strong>1. Identificar semireaccions tal com estan escrites:</strong></p>
+                <p>Oxidació: \( \text{Co(s)} \rightarrow \text{Co}^{2+}\text{(aq)} + 2e^- \) (Ànode hipotètic)</p>
+                <p>Reducció: \( \text{Fe}^{2+}\text{(aq)} + 2e^- \rightarrow \text{Fe(s)} \) (Càtode hipotètic)</p>
+                <p><strong>2. Calcular \(E^\circ_{\text{reacció}}\) per a la reacció tal com està escrita:</strong></p>
+                <p>\( E^\circ_{\text{reacció}} = E^\circ_{\text{reducció (Fe)}} - E^\circ_{\text{reducció (Co)}} \)</p>
+                <p>\( E^\circ_{\text{reacció}} = (-0.44 \, \text{V}) - (-0.28 \, \text{V}) = -0.44 + 0.28 = -0.16 \, \text{V} \)</p>
+                <p>Com que \(E^\circ_{\text{reacció}}\) és negatiu, la reacció no és espontània en condicions estàndard en la direcció escrita.</p>
+                <p><strong>3. Calcular E de la reacció en les condicions donades (Equació de Nernst, n=2):</strong></p>
+                <p>\( E = E^\circ - \frac{0.0592}{2} \log Q \)</p>
+                <p>\( Q = \frac{[\text{Co}^{2+}]}{[\text{Fe}^{2+}]} \) (sòlids no inclosos)</p>
+                <p>\( Q = \frac{0.15}{0.68} \approx 0.22059 \)</p>
+                <p>\( E = -0.16 \, \text{V} - 0.0296 \log (0.22059) \)</p>
+                <p>\( E = -0.16 \, \text{V} - 0.0296 \times (-0.6564) \)</p>
+                <p>\( E = -0.16 \, \text{V} + 0.01943 \approx -0.14057 \, \text{V} \)</p>
+                <div class="final-answer">\(E \approx -0.14 \, \text{V}\)</div>
+                <p>Com que \(E < 0\), la reacció <strong>no és espontània</strong> en la direcció escrita sota les condicions donades.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-16 pt-8 border-t border-gray-300 text-sm text-gray-600">
+        <p class="footer-attribution">Resolució d'Exercicis d'Electroquímica - Curs Avançat</p>
+    </footer>
+
+    <script>
+        // No cal JavaScript per funcionalitat, només per MathJax.
+        // MathJax s'executarà automàticament en carregar la pàgina.
+    </script>
+
+</body>
+</html>
